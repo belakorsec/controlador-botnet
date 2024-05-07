@@ -1,12 +1,16 @@
+# Import libraries
 import flask
 
+# Define variables
+PORT = 5000
+METHOD = "GET"
 app = flask.Flask(__name__)
 
 
-@app.route("/", methods=["GET"])
+# Define the route
+@app.route("/", methods=METHOD)
 def send_data():
-    input_data = int(input("Total requests: "))
-    data = {
+    return {
         "total_requests": input_data,
         "concurrent_requests": 10,
         "method": "GET",
@@ -14,8 +18,8 @@ def send_data():
         "wait_time": 5,
         "timeout": 30,
     }
-    return data
 
 
+# Run the app
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(port=PORT)
