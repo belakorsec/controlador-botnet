@@ -11,8 +11,8 @@ app = flask.Flask(__name__)
 @app.route("/", methods=METHODS)
 def send_data():
     return {
-        "total_requests": 1,
-        "concurrent_requests": 10,
+        "total_requests": 90000,
+        "concurrent_requests": 1000,
         "method": "GET",
         "target_url": "https://www.hola.com",
         "wait_time": 5,
