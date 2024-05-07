@@ -18,8 +18,3 @@ def send_data():
         "wait_time": 5,
         "timeout": 30,
     }
-
-
-# Run the app
-if __name__ == "__main__":
-    app.run(port=PORT)
