@@ -3,7 +3,7 @@ import flask
 
 # Define variables
 PORT = 5000
-METHOD = "GET"
+METHODS = ["GET"]
 app = flask.Flask(__name__)
 
 
