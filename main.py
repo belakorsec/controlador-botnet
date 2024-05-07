@@ -8,7 +8,7 @@ app = flask.Flask(__name__)
 
 
 # Define the route
-@app.route("/", methods=METHOD)
+@app.route("/", methods=METHODS)
 def send_data():
     return {
         "total_requests": input_data,
